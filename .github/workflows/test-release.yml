@@ -4,15 +4,21 @@ on: pull_request
 
 jobs:
   test_publish:
+    name: Dry run for semantic release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: 'olegkoval'
+          always-auth: true
       - env:
           CI: true
-        run: npm ci
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm ci --unsafe-perm
       - env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
