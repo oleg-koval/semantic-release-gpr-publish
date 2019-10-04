@@ -3,13 +3,8 @@ set -e
 
 prefix="refs/heads/"
 
-# echo $GITHUB_REF
-printenv
-
-[[ "$GITHUB_REF" =~ ^$prefix(.*)$ ]]
+[[ "$GITHUB_HEAD_REF" =~ ^$prefix(.*)$ ]]
 BRANCH=${BASH_REMATCH[1]}
-
-# echo $BRANCH
 
 echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > /home/runner/work/_temp/.npmrc
 npx semantic-release --dry-run --debug -b $BRANCH
