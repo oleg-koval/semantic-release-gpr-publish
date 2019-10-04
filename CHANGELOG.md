@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/oleg-koval/semantic-release-gpr-publish/compare/v1.0.1...v1.0.2) (2019-10-04)
+
+
+### Continuous Integration
+
+* **npm:** update token ([e8c58126d21694871268380d1158e4587ea9e7ff](https://github.com/oleg-koval/semantic-release-gpr-publish/commit/e8c58126d21694871268380d1158e4587ea9e7ff))
+
 ## [1.0.1](https://github.com/oleg-koval/semantic-release-gpr-publish/compare/v1.0.0...v1.0.1) (2019-10-04)
 
 
