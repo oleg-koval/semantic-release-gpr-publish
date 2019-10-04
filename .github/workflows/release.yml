@@ -1,5 +1,6 @@
 name: Publish
-true:
+
+on:
   push:
     branches:
       - master
