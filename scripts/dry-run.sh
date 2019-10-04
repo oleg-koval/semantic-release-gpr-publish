@@ -3,6 +3,8 @@ set -e
 
 prefix="refs/heads/"
 
+echo $GITHUB_REF
+
 [[ "$GITHUB_REF" =~ ^$prefix(.*)$ ]]
 BRANCH=${BASH_REMATCH[1]}
 
