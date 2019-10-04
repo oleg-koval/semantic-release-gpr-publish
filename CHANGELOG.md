@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/oleg-koval/semantic-release-gpr-publish/compare/v1.0.0...v1.0.1) (2019-10-04)
+
+
+### Continuous Integration
+
+* **npm:** update npm configuration ([30961ceb7df9031acb0b444e71d88d8a63ecd107](https://github.com/oleg-koval/semantic-release-gpr-publish/commit/30961ceb7df9031acb0b444e71d88d8a63ecd107))
+
 # 1.0.0 (2019-10-04)
 
 

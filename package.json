@@ -37,9 +37,9 @@
   "peerDependencies": {
     "semantic-release": ">=15.13.24"
   },
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://npm.pkg.github.com/"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
@@ -48,5 +48,5 @@
   "scripts": {
     "semantic-release": "semantic-release"
   },
-  "version": "0.0.0-development"
+  "version": "1.0.1"
 }
