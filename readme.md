@@ -1,19 +1,19 @@
-# semantic-release-npm-github-publish
+# semantic-release-gpr-publish
 
 <p>
-  <a href="https://github.com/oleg-koval/semantic-release-npm-github-publish/actions" target="_blank">
-    <img alt="Version" src="https://github.com/oleg-koval/semantic-release-npm-github-publish/workflows/Publish/badge.svg?branch=master">
+  <a href="https://github.com/oleg-koval/semantic-release-gpr-publish/actions" target="_blank">
+    <img alt="Version" src="https://github.com/oleg-koval/semantic-release-gpr-publish/workflows/Publish/badge.svg?branch=master">
   </a>
-  <a href="https://www.npmjs.com/package/semantic-release-npm-github-publish" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/semantic-release-npm-github-publish.svg">
+  <a href="https://www.npmjs.com/package/semantic-release-gpr-publish" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/semantic-release-gpr-publish.svg">
   </a>
-  <a href="https://github.com/oleg-koval/semantic-release-npm-github-publish#readme" target="_blank">
+  <a href="https://github.com/oleg-koval/semantic-release-gpr-publish#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/oleg-koval/semantic-release-npm-github-publish/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/oleg-koval/semantic-release-gpr-publish/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/oleg-koval/semantic-release-npm-github-publish/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/oleg-koval/semantic-release-gpr-publish/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
 </p>
@@ -33,7 +33,7 @@
 ## Install
 
 ```sh
-npm install --save-dev semantic-release-npm-github-publish
+npm install --save-dev semantic-release-gpr-publish
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ To use this sharable config, extend your semantic release configuration:
 
 ```json
 {
-  "extends": "semantic-release-npm-github-publish",
+  "extends": "semantic-release-gpr-publish",
   "branch": "master",
   "debug": false
 }
