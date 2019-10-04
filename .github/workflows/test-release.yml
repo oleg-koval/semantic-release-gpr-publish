@@ -4,24 +4,31 @@ on: pull_request
 
 jobs:
   test_publish:
-    name: Dry run for semantic release
+    name: "Dry run for semantic release"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      -
+        uses: actions/checkout@v1
+      -
+        uses: actions/setup-node@v1
         with:
-          node-version: 12
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          registry-url: 'https://npm.pkg.github.com'
-          scope: 'olegkoval'
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           always-auth: true
-      - env:
+          node-version: 12
+          registry-url: "https://npm.pkg.github.com"
+          scope: olegkoval
+      -
+        env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm ci --unsafe-perm
-      - env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: "npm ci --unsafe-perm"
+      -
+        env:
           CI: true
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: ./scripts/dry-run.sh
+          GH_TOKEN: "${{ secrets.GH_TOKEN }}"
+          GITHUB_HEAD_REF: $GITHUB_HEAD_REF
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+        run: |
+            echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > /home/runner/work/_temp/.npmrc
+            npx semantic-release --dry-run --debug -b $GITHUB_HEAD_REF
