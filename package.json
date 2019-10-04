@@ -8,12 +8,12 @@
     "@semantic-release/npm": "^5.1.15",
     "@semantic-release/release-notes-generator": "^7.3.0"
   },
-  "description": "Semantic-release shareable configuration for easy publishing to NPM, Github or Github Package Registry.",
+  "description": "Semantic-release shareable configuration for publishing to Github Package Registry.",
   "devDependencies": {
     "semantic-release": "^15.13.24"
   },
   "files": [
-    ".releaserc.json"
+    "release.config.js"
   ],
   "keywords": [
     "changelog",
@@ -28,11 +28,12 @@
     "release",
     "semantic-release-config",
     "semantic-release",
-    ".releaserc.json"
+    ".releaserc.json",
+    "release.config.js"
   ],
   "license": "MIT",
-  "main": ".releaserc.json",
-  "name": "semantic-release-npm-github-publish",
+  "main": "release.config.js",
+  "name": "semantic-release-gpr-publish",
   "peerDependencies": {
     "semantic-release": ">=15.13.24"
   },
@@ -41,10 +42,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oleg-koval/semantic-release-npm-github-publish.git"
+    "url": "https://github.com/oleg-koval/semantic-release-gpr-publish.git"
   },
   "scripts": {
     "semantic-release": "semantic-release"
   },
-  "version": "1.1.10"
+  "version": "0.0.0-development"
 }
